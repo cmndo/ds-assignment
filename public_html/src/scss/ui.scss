@@ -1,0 +1,44 @@
+@import "../../bower_components/normalize-scss/normalize";
+
+@import "bourbon/bourbon";
+@import "base/base";
+@import "neat/neat";
+
+@import "settings";
+@import "components";
+
+// UI.html exmample styles only
+.outer-container {
+    @include outer-container();
+}
+
+.feature {
+    margin: 40px 0;
+    @extend .row-padd;
+}
+
+.feature-title {
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    border-bottom: solid 1px #dedede;
+}
+
+.button-error {
+    @include button($error-color);
+}
+
+.button-warning {
+    @include button($warning-color);
+}
+
+.button-success {
+    @include button($success-color);
+}
+
+.button-pill {
+    @include button(pill, $primary-color);
+}
+
+.button-shiny {
+    @include button(shiny, $primary-color);
+}

@@ -1,0 +1,123 @@
+@import "../../bower_components/normalize-scss/normalize";
+
+@import "bourbon/bourbon";
+@import "base/base";
+@import "neat/neat";
+
+@import "settings";
+@import "components";
+/*
+  Global Helpers
+*/
+h1, h2, h3 {
+  font-weight: 300;
+  font-size: 2.8em;
+}
+.container {
+  @include outer-container;
+}
+
+/*
+  Top nav bar
+*/
+.nav-wrapper {
+  background: #1d1e20;
+
+  nav {
+    @include outer-container;
+    padding: 15px;
+
+    .logo {
+      max-width: 228px;
+      float: left;
+    }
+    .preorder {
+      float: right;
+      text-transform: uppercase;
+
+    }
+  }
+}
+
+/*
+  Masthead
+*/
+header {
+  padding: 3em 0;
+
+  background-image: url('/images/course.jpg');
+  background-size: cover;
+  background-position: 50% 50%;
+  .page-jumps {
+    margin: 0 auto;
+    text-align: center;
+    max-width: 383px;
+  }
+}
+
+/*
+  Logo Wall Section
+*/
+.logo-wall {
+  @include outer-container;
+  text-align: center;
+}
+
+.stacking-outlets {
+  .outlet {
+    display: inline-block;
+    @include span-columns(3);
+    height: 6.5em;
+
+    &:nth-of-type(4n) {
+      @include omega();
+    }
+
+  }
+}
+/*
+  Each Story Section
+*/
+.stories {
+  border-top: solid 1px $light-gray;
+}
+.story {
+  @include outer-container;
+  padding: em(66) 0;
+  border-top: inherit;
+
+  &:first-child {
+    border-top: none;
+  }
+
+  .image-holder {
+    @include span-columns(4);
+  }
+  .preview {
+    @include shift(1);
+    @include span-columns(7);
+    @include omega();
+
+    h3 {
+      margin: 0;
+      font-size: 2.2em;
+    }
+    h4 {
+      margin: 0;
+      text-transform: uppercase;
+      color: $medium-gray;
+      font-size: 1.2em;
+    }
+    p {
+      margin: em(38) 0;
+    }
+  }
+}
+
+
+/*
+  Footer
+*/
+footer {
+  height: 20em;
+}

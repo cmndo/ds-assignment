@@ -1,0 +1,12 @@
+// default .button class, can be used directly or extended
+// use button mixin directly for variations
+.button {
+    @include button($primary-color);
+}
+
+.glass {
+  border: solid 1px $green;
+  background: rgb(0, 0, 0);
+  background: rbga(0,0,0,0.8);
+  border-radius: 8px;
+}
