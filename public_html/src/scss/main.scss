@@ -9,28 +9,32 @@
 /*
   Global Helpers
 */
+
 h1, h2, h3 {
-  font-weight: 300;
   font-size: 2.8em;
+  font-weight: 300;
+  margin: 0;
+}
+h2 {
+  text-align: center;
+  margin: em(18) 0;
 }
 h3 {
+  font-size: 2.2em;
   color: $dark-gray;
   margin: 0 0 em(6) 0;
-  font-size: 2.2em;
 }
 h4 {
+  font-size: 0.8em;
   margin: 0;
   text-transform: uppercase;
   color: $light-gray;
-  font-size: 0.8em;
 }
 p {
   margin: em(27) 0 em(30) 0;
   color: $medium-gray;
 }
-.container {
-  @include outer-container;
-}
+
 
 /*
   Top nav bar
@@ -46,10 +50,9 @@ p {
       max-width: 228px;
       float: left;
     }
-    .preorder {
+    button.preorder {
       float: right;
       text-transform: uppercase;
-
     }
   }
 }
@@ -57,49 +60,50 @@ p {
 /*
   Masthead
 */
-header {
-  padding: 3em 0;
+.masthead {
 
+  padding: 3em 0;
   background-image: url('/images/course.jpg');
   background-size: cover;
   background-position: 50% 50%;
-  h1 {
-    margin: 0;
-  }
-  .page-details {
+
+  .description {
+
     margin: 0 auto;
     text-align: center;
     max-width: 383px;
 
-
-    .button-friends {
-      $half-sep-dist: .75em;
-      button{
-        &:first-child {
-          margin-right: $half-sep-dist;
-        }
-        &:last-child {
-          margin-left: $half-sep-dist;
-        }
-      }
+    button {
+      margin: .75em;
     }
 
   }
 }
 
 /*
-  Logo Wall Section
+  Sections
 */
+
+
 .logo-wall {
   @include outer-container;
   text-align: center;
+  padding: 20px;
 }
 
-.stacking-outlets {
+.news-outlets {
+  vertical-align: center;
+
   .outlet {
+
     display: inline-block;
     @include span-columns(3);
-    height: 6.5em;
+
+    margin-bottom: 20px;
+
+    padding: 10px;
+
+    border: solid 1px $light-gray;
 
     &:nth-of-type(4n) {
       @include omega();
