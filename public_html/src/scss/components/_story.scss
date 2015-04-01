@@ -1,0 +1,28 @@
+.story {
+
+  @include outer-container;
+  padding: em(66) 0;
+  border-top: inherit;
+
+  &:first-child {
+    border-top: none;
+  }
+
+  .image-holder {
+    padding-top: em(40);
+    @include span-columns(4);
+  }
+  .preview {
+    @include shift(1);
+    @include span-columns(7);
+    @include omega();
+  }
+  button {
+    padding: 17px 20px 18px 50px;
+    font-size: .8em;
+    text-transform: uppercase;
+    letter-spacing: .1em;
+    background: url('/images/icon-book.png') no-repeat $green 18px center ;
+  }
+
+}

@@ -13,6 +13,21 @@ h1, h2, h3 {
   font-weight: 300;
   font-size: 2.8em;
 }
+h3 {
+  color: $dark-gray;
+  margin: 0 0 em(6) 0;
+  font-size: 2.2em;
+}
+h4 {
+  margin: 0;
+  text-transform: uppercase;
+  color: $light-gray;
+  font-size: 0.8em;
+}
+p {
+  margin: em(27) 0 em(30) 0;
+  color: $medium-gray;
+}
 .container {
   @include outer-container;
 }
@@ -48,10 +63,27 @@ header {
   background-image: url('/images/course.jpg');
   background-size: cover;
   background-position: 50% 50%;
-  .page-jumps {
+  h1 {
+    margin: 0;
+  }
+  .page-details {
     margin: 0 auto;
     text-align: center;
     max-width: 383px;
+
+
+    .button-friends {
+      $half-sep-dist: .75em;
+      button{
+        &:first-child {
+          margin-right: $half-sep-dist;
+        }
+        &:last-child {
+          margin-left: $half-sep-dist;
+        }
+      }
+    }
+
   }
 }
 
@@ -76,43 +108,32 @@ header {
   }
 }
 /*
-  Each Story Section
+  Stories section has story components inside of it
 */
 .stories {
   border-top: solid 1px $light-gray;
 }
-.story {
-  @include outer-container;
-  padding: em(66) 0;
-  border-top: inherit;
 
-  &:first-child {
-    border-top: none;
-  }
+.more-content {
+  height: em(55);
+  background: $light-gray;
+  text-align: center;
+  text-transform: uppercase;
 
-  .image-holder {
-    @include span-columns(4);
-  }
-  .preview {
-    @include shift(1);
-    @include span-columns(7);
-    @include omega();
+  button {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    background: white;
+    color: $medium-gray;
+    padding: 13px 33px;
+    font-size: .8em;
+    text-transform: uppercase;
+    letter-spacing: .1em;
 
-    h3 {
-      margin: 0;
-      font-size: 2.2em;
-    }
-    h4 {
-      margin: 0;
-      text-transform: uppercase;
-      color: $medium-gray;
-      font-size: 1.2em;
-    }
-    p {
-      margin: em(38) 0;
-    }
   }
 }
+
+
 
 
 /*
