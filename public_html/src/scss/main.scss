@@ -129,7 +129,7 @@ p {
   border-top: solid 1px $light-gray;
 
   .story {
-    
+
   }
 
 }
@@ -161,6 +161,15 @@ p {
 */
 .guidelines {
   background-color: $dark-gray;
+  text-align: center;
+  padding: 20px;
+  padding-bottom: 60px;
+
+  .dark {
+    background: #363636
+  }
+
+
 
 }
 
