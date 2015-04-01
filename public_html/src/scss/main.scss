@@ -34,6 +34,9 @@ p {
   margin: em(27) 0 em(30) 0;
   color: $medium-gray;
 }
+.light {
+  color: $white;
+}
 
 
 /*
@@ -89,21 +92,29 @@ p {
   @include outer-container;
   text-align: center;
   padding: 20px;
+  padding-bottom: 75px;
 }
 
 .news-outlets {
-  vertical-align: center;
 
   .outlet {
-
-    display: inline-block;
+    position: relative;
     @include span-columns(3);
-
     margin-bottom: 20px;
-
     padding: 10px;
-
     border: solid 1px $light-gray;
+    @include transition(all .2s ease-out);
+    @include transform-origin(center top);
+    @include transform-style(preserve-3d);
+    cursor: pointer;
+
+    &:hover {
+      z-index: 5;
+      @include transform(scale(0.9) rotateY(-2deg));
+      opacity: 0.4;
+    }
+
+
 
     &:nth-of-type(4n) {
       @include omega();
@@ -116,8 +127,16 @@ p {
 */
 .stories {
   border-top: solid 1px $light-gray;
+
+  .story {
+    
+  }
+
 }
 
+/*
+  Additional Stories Toggler
+*/
 .more-content {
   height: em(55);
   background: $light-gray;
@@ -137,6 +156,13 @@ p {
   }
 }
 
+/*
+  Guidelines section
+*/
+.guidelines {
+  background-color: $dark-gray;
+
+}
 
 
 
