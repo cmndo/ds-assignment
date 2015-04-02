@@ -1,21 +1,43 @@
 .story {
 
-  @include outer-container;
-  padding: em(66) 0;
+  text-align: center;
+  padding: em(66);
   border-top: inherit;
+
+  @include desktop{
+    text-align: left;
+    @include outer-container;
+
+
+  }
 
   &:first-child {
     border-top: none;
   }
 
   .image-holder {
-    padding-top: em(40);
-    @include span-columns(4);
+    padding-bottom: em(20);
+
+    @include desktop{
+      padding-top: em(40);
+      padding-left: em(10);
+      @include span-columns(4);
+    }
   }
   .preview {
-    @include shift(1);
-    @include span-columns(7);
-    @include omega();
+    max-width: 60%;
+    margin: 0 auto;
+
+    @include desktop{
+      max-width: auto;
+      padding-left: em(40);
+      @include span-columns(7);
+      @include omega();
+    }
+
+    p {
+      text-align: left;
+    }
   }
   button {
     padding: 17px 20px 18px 50px;

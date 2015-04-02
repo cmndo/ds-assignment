@@ -103,18 +103,6 @@ p {
 		margin-bottom: 20px;
 		padding: 10px;
 		border: solid 1px $light-gray;
-		@include transition(all .2s ease-out);
-		@include transform-origin(center top);
-		@include transform-style(preserve-3d);
-		cursor: pointer;
-
-		&:hover {
-			z-index: 5;
-			@include transform(scale(0.9) rotateY(-2deg));
-			opacity: 0.4;
-		}
-
-
 
 		&:nth-of-type(4n) {
 			@include omega();
@@ -199,7 +187,30 @@ p {
   }
 
 }
+/*
+  Press Inquiry form
+*/
+.contact {
+  @include outer-container;
 
+  padding: 60px 20px;
+
+  .instructions {
+    @include span-columns(7);
+
+  }
+  .form {
+    @include span-columns(5);
+    @include omega();
+
+    padding-left: em(51px);
+
+    input, textarea {
+      background-color: $near-white;
+    }
+  }
+
+}
 
 
 /*
