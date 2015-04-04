@@ -11,3 +11,30 @@ $link-color: #477dca;
 
 //other settings
 $base-button-color: #5bb640;
+
+
+/*
+  This is the most straight forward implemenation
+  of media queries I can wrap my brain around
+
+
+  @include tablet {
+    //tablet css here
+  }
+  
+
+*/
+$tablet-width: 768px;
+$desktop-width: 1024px;
+
+@mixin tablet {
+  @media (min-width: #{$tablet-width}) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: #{$desktop-width}) {
+    @content;
+  }
+}

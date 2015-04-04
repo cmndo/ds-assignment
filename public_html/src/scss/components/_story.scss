@@ -1,50 +1,55 @@
 .story {
 
   text-align: center;
-  padding: em(66);
   border-top: inherit;
+  padding: em(20) em(20);
 
-  @include desktop{
-    text-align: left;
-    @include outer-container;
-
-
-  }
 
   &:first-child {
     border-top: none;
   }
 
-  .image-holder {
-    padding-bottom: em(20);
-
-    @include desktop{
-      padding-top: em(40);
-      padding-left: em(10);
-      @include span-columns(4);
-    }
+  @include tablet {
+    @include outer-container;
+    text-align: left;
+    background: white;
   }
-  .preview {
-    max-width: 60%;
-    margin: 0 auto;
 
-    @include desktop{
-      max-width: auto;
-      padding-left: em(40);
-      @include span-columns(7);
-      @include omega();
+  .image-wrapper {
+
+    @include tablet{
+      padding-left: em(10);
+      @include span-columns(5);
     }
+
+  }
+
+
+  .title-wrapper {
+
+    margin: 0 auto;
 
     p {
       text-align: left;
     }
+
+    @include tablet {
+      @include omega();
+      @include span-columns(7);
+    }
+
   }
+
   button {
     padding: 17px 20px 18px 50px;
     font-size: .8em;
     text-transform: uppercase;
     letter-spacing: .1em;
     background: url('/images/icon-book.png') no-repeat $green 18px center ;
+    background-color: #297373;
+
+    
+
   }
 
 }
