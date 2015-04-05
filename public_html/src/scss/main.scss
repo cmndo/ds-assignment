@@ -233,14 +233,21 @@ p {
   padding: 60px 20px;
 
   .instructions {
-    @include span-columns(7);
+
+		@include tablet {
+			@include span-columns(7);
+		}
 
   }
   .form {
-    @include span-columns(5);
-    @include omega();
 
-    padding-left: em(51px);
+		@include tablet {
+    	@include span-columns(5);
+    	@include omega();
+			padding-left: em(51px);
+		}
+
+
 
     input, textarea {
       background-color: $near-white;
