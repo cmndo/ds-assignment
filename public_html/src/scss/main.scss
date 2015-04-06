@@ -168,10 +168,11 @@ button {
 */
 .stories {
 	border-top: solid 1px $light-gray;
-	.story-group {
-		padding: em(40) 0;
-		border-top: inherit;
+
+	.page {
+		@include outer-container;
 	}
+
 	//components/_story.scss
 
 }
@@ -267,7 +268,7 @@ button {
     input, textarea {
       background-color: $near-white;
     }
-		
+
   }
 
 }

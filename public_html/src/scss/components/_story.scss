@@ -1,8 +1,9 @@
 .story {
 
   text-align: center;
-  border-top: inherit;
-  padding: em(20) em(20);
+  border-top: solid 1px $light-gray;
+  padding: em(60) em(20);
+  display: inline-block;
 
 
   &:first-child {
