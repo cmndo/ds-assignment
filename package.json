@@ -31,7 +31,9 @@
     "vinyl-transform": "^1.0.0",
     "slick-carousel": "~1.5.0"
   },
-  "browserify-shim": {},
+  "browserify-shim": {
+    "jquery": "global:$"
+  },
   "browserify": {
     "transform": [
       "browserify-shim"

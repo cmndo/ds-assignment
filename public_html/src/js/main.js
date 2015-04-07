@@ -4,16 +4,21 @@
 
 	var //Require Components
 			enquire = require("../../bower_components/enquire"),
-			renderfarm = require('components/renderfarm');
+			renderfarm = require("./components/renderfarm");
 
 			//Register Global/jQuery Components
-			require("../../../node_modules/slick-carousel/slick/slick.js");
+			require("../../bower_components/slick.js/slick/slick");
 
 
 	//When DOM is loaded
 	document.addEventListener('DOMContentLoaded', function() {
 
-		//Prepare Header Ball Drop for Tablet and Mobile
+			//Prepare Header Ball Drop for Tablet and Mobile
+		//gyronorm !!!
+
+
+		//Prepare Renderfarm
+
 
 		var //Prepare "More Articles Expansion"
 				$moreArticlesBtn = $('[data-more-btn]'),
