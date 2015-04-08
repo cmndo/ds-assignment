@@ -39,8 +39,8 @@ module.exports = function() {
 	// pipe all JS pages files through JSHint, browserify, uglify and finally save to dist
 	gulp.src([config.paths.src+'/js/main.js'])
 		.pipe(browserified).on('error', notify.onError({
-			title: "They pay you to do this?",
-			message: "<%= error.message %> ?! Is this some kind of joke?"
+			title: "Build Failed",
+			message: "<%= error.message %>"
 		}))
 		.pipe(sourcemaps.init({loadMaps: true}))
 		.pipe(gulpif(doUglify, uglify({

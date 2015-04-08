@@ -34,8 +34,8 @@ module.exports = function() {
         // another environment on the same vps
         container: crypto.createHash('md5').update(__dirname).digest('hex')
     }).on('error', notify.onError({
-        title: "You dun goofed.",
-        message: "<%= error.message %> and the consequences, will never be the same!"
+        title: "SASS Failed",
+        message: "<%= error.message %>"
     }))
     .pipe(gulpif(useMaps, sourcemaps.write('maps', {
       includeContent: false,

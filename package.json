@@ -28,8 +28,7 @@
     "jshint-stylish": "^1.0.1",
     "lodash": "^3.6.0",
     "map-stream": "0.0.5",
-    "vinyl-transform": "^1.0.0",
-    "slick-carousel": "~1.5.0"
+    "vinyl-transform": "^1.0.0"
   },
   "browserify-shim": {
     "jquery": "global:$"

@@ -140,31 +140,61 @@ and get assets to strike up a new conversation.</p>
       <h3>Press Inquiries</h3>
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat.</p>
       <ul class="other-methods">
-        <li><span>Phone</span><a href="tel:">(999) 999-9999</a></li>
-        <li><span>Email</span><a href="mailto:">info@arcos.com</a></li>
-        <li><span>Social</span>
-          <ul>
-            <li><a href="http://facebook.com"></a></li>
-            <li><a href="http://twitter.com"></a></li>
-          </ul>
+        <li class="phone">
+          <label>Phone</label>
+          <a href="tel:">(999) 999-9999</a>
+        </li>
+        <li class="email">
+          <label>Email</label>
+          <a href="mailto:">info@arcos.com</a>
+          </li>
+        <li class="social">
+          <label>Social</label>
+          <a class="facebook" href="http://facebook.com"></a>
+          <a class="twitter" href="http://twitter.com"></a>
         </li>
       </ul>
     </div>
     <div class="form">
-      <span>Full Name</span>
-      <input type="text">
-      <span>Email Address</span>
-      <input type="text">
-      <span>Reason for Inquiry</span>
-      <textarea rows="6"></textarea>
-      <button>Submit Inquiry</button>
+      <label>Full Name
+        <input type="text" data-form-name>
+      </label>
+      <label>Email Address
+        <input type="text" data-form-email>
+      </label>
+      <label>Reason for Inquiry
+        <textarea rows="6" data-form-message></textarea>
+      </label>
+      <button class="submit" data-form-submit>Submit Inquiry</button>
     </div>
 
   </section>
-  <footer></footer>
+  <footer>
+    <div class="newsletter-signup">
+      <span>Subscribe to our newsletter to stay on top of your game with Arccos.</span>
+      <div class="form"><input type="text" placeholder="Email Address" data-form-subscribe-email><button class="subscribe">Subscribe</button></div>
+    </div>
+  </footer>
 
   <script src="//use.typekit.net/phv7wgm.js"></script>
   <script>try{Typekit.load();}catch(e){}</script>
+  <script>
+	var oldieCheck = Boolean(document.getElementsByTagName('html')[0].className.match(/\soldie\s/g));
+	if(!oldieCheck) {
+		document.write('<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"><\/script>');
+	} else {
+		document.write('<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"><\/script>');
+	}
+	</script>
+  <script>
+      if(!window.jQuery) {
+          if(!oldieCheck) {
+              document.write('<script src="/bower_components/jquery/dist/jquery.min.js"><\/script>');
+          } else {
+              document.write('<script src="/bower_components/jquery-oldie/index.js"><\/script>');
+          }
+      }
+  </script>
   <script src="/dist/js/main.js"></script>
 </body>
 </html>

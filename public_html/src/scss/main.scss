@@ -251,12 +251,51 @@ button {
   padding: 60px 20px;
 
   .instructions {
-
 		@include tablet {
 			@include span-columns(7);
 		}
-
   }
+
+	.other-methods {
+		@include outer-container;
+		margin-bottom: em(30);
+		li {
+			@include span-columns(4);
+			display: inline-block;
+		}
+		label {
+			font-weight: normal;
+			color: $light-gray;
+		}
+		a {
+			font-weight: bold;
+			color: $green;
+		}
+		.social {
+
+			a {
+				display: inline-block;
+				width: 27px;
+				height: 27px;
+			}
+			.facebook {
+				background: url('/images/social-facebook.png');
+				background-size: cover;
+			}
+			.twitter {
+				background: url('/images/social-twitter.png');
+				background-size: cover;
+			}
+		}
+		.submit {
+			@include tablet {
+				text-align: center;
+			}
+		}
+	}
+
+
+
   .form {
 
 		@include tablet {
@@ -279,4 +318,44 @@ button {
 */
 footer {
 	height: 20em;
+	background: $near-black;
+}
+
+.newsletter-signup {
+	color: $light-gray;
+	text-align: center;
+	font-size: 14px;
+	padding: em(50);
+
+	@include outer-container;
+
+
+	.form {
+		display: inline-block;
+	}
+
+	input {
+		margin-left: 20px;
+		height: 100%;
+		width: 223px;
+		padding: 5px 10px;
+		margin-bottom: 0;
+		background: transparent;
+		border-radius: 8px 0 0 8px;
+		border-width: 2px;
+		display: inline-block;
+		color: $light-gray;
+		font-style: italic;
+		font-size: em(14px);
+	}
+
+	button {
+		/*Please line up*/
+		position: relative;
+		top:-1px;
+		border-radius: 0px 8px 8px 0px;
+		padding: 10px 20px;
+		background: $light-gray;
+
+	}
 }

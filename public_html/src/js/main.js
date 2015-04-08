@@ -44,7 +44,7 @@
 			//Animate the height of the $storyPage container to fit the newly inserted
 			// content
 			$storyPage.animate({
-				height: $threeStories.position().top + $threeStories.outerHeight()
+				height: $fauxData.position().top + $fauxData.outerHeight()
 			}, 'slow', function() {
 				//Upon animaiton complete, reset the conditions of the container so that
 				// it will continue to respond accordingly.

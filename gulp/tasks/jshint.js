@@ -25,7 +25,7 @@ module.exports = function() {
 	// Custom linting reporter used for error notify
 	var jsHintErrorReporter = map(function (file, cb) {
 		if (!file.jshint.success) {
-			emmitter.emit('error', new Error("[jshint] failed. Check console above."));
+			emmitter.emit('error', new Error("[jshint] failed. Check terminal."));
 		}
 		cb(null, file);
 	});
