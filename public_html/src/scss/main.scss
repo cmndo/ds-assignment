@@ -55,6 +55,8 @@ button {
 	white-space: pre;
 }
 
+
+
 /*
 	Top nav bar
 */
@@ -89,7 +91,7 @@ button {
 	Masthead
 */
 .masthead {
-
+  @include transition(.35s ease all);
 	padding: 3em;
 
 	background-color: #232323;
@@ -309,6 +311,9 @@ button {
 		@include tablet {
 			@include span-columns(7);
 		}
+    a:hover {
+      text-decoration: underline;
+    }
   }
 
 	.other-methods {
