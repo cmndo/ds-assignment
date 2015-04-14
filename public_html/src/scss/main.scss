@@ -9,6 +9,12 @@
 /*
 	Global Helpers
 */
+@mixin reset {
+  width:100%;
+  height:100%;
+  margin:0;
+  padding:0;
+}
 
 h1, h2, h3 {
 	font-size: 2.8em;
@@ -223,8 +229,57 @@ button {
     - I wonder if they should just be images.
   */
   .crowns, .verticals, .sideways {
-    @include span-columns(4);
+		img {
+			display: inline !important; //cancel out slick-slide's block
+		}
+		@include tablet {
+			@include span-columns(4);
+		}
   }
+
+	//max-width on .slide-wrapper for mobile
+	.slide-wrapper {
+		max-width: 337px;
+		margin: 0 auto;
+		@include tablet {
+			max-width: 100%;
+		}
+	}
+
+	/*
+		There are little pagination dots that I want to show, but slick.js uses
+		buttons and Neat styles buttons. This is one of the dumb aspects of the cascade
+		I haven't leanred yet. How can I start with a blank, unstyled, normalized
+		dom element?
+	*/
+	.slick-dots {
+		li {
+			display: inline;
+		}
+		button {
+			font-size: 0;
+			line-height: 0;
+			width: 20px;
+			height: 20px;
+			padding: 5px;
+			margin: 10px;
+			cursor: pointer;
+			color: transparent;
+			border: 0;
+			outline: none;
+			background: $dark-gray;
+		}
+
+		//when selected
+		.slick-active {
+			button {
+				background: $green;
+			}
+		}
+
+	}
+
+
   //small logos in .crowns need to be part of the grid
   .crowns .small {
     margin-top: 1em;
@@ -326,6 +381,9 @@ footer {
 	text-align: center;
 	font-size: 14px;
 	padding: em(50);
+	span {
+		padding-bottom: em(20);
+	}
 
 	@include outer-container;
 
