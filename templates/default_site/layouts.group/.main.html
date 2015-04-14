@@ -161,18 +161,18 @@ and get assets to strike up a new conversation.</p>
         </li>
       </ul>
     </div>
-    <div class="form" data-parsely-form>
-      <label>Full Name
-        <input type="text">
+    <form class="form" data-parsley-validate>
+      <label>Full Name*
+        <input type="text" required>
       </label>
-      <label>Email Address
-        <input type="text">
+      <label>Email Address*
+        <input type="text" data-parsley-type="email" required>
       </label>
-      <label>Reason for Inquiry
-        <textarea rows="6"></textarea>
+      <label>Reason for Inquiry*
+        <textarea rows="6" required></textarea>
       </label>
       <button class="submit">Submit Inquiry</button>
-    </div>
+    </form>
 
   </section>
   <footer>
@@ -201,6 +201,7 @@ and get assets to strike up a new conversation.</p>
           }
       }
   </script>
+  <script src="/bower_components/parsleyjs/dist/parsley.min.js"></script>
   <script src="/dist/js/main.js"></script>
 </body>
 </html>

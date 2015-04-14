@@ -60,7 +60,7 @@
 
 
 		var //Prepare "Brand Guidelines" Section (Don't forget to bower install)
-				$swiperElem = jQuery('[data-slickjs-wrapper]');
+				$swiperElem = $('[data-slickjs-wrapper]');
 
 		//Apply a slick slider to the container around the crown logo wall
 		// Centered, slides
@@ -80,15 +80,6 @@
 				}
 			}]
 		});
-
-
-
-		var //Parsley
-				form = $('[data-parsely-form]');
-
-				//Apply Parsley validation
-				form.parsely();
-
 
 
 	});

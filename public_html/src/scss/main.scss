@@ -6,6 +6,7 @@
 
 @import "settings";
 @import "components";
+
 /*
 	Global Helpers
 */
@@ -53,7 +54,6 @@ button {
 	content: "\A";
 	white-space: pre;
 }
-
 
 /*
 	Top nav bar
@@ -362,8 +362,25 @@ button {
     input, textarea {
       background-color: $near-white;
     }
-
+    /*
+      A little extra parsley
+    */
+    .parsley-error {
+      background: $error-color;
+    }
+    // .parsley-success {
+    //   background: $success-color;
+    // }
+    .parsley-required {
+      font-size: em(12);
+      text-align: right;
+    }
+    .parsley-errors-list.filed {
+      margin: 0;
+    }
   }
+
+
 
 }
 
@@ -372,7 +389,7 @@ button {
 	Footer
 */
 footer {
-	height: 20em;
+	height: 8em;
 	background: $near-black;
 }
 
